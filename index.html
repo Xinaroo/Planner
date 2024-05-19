@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Planner</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="planner.css">
+    <script src="planner.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1 class="press-start-2p-regular">Planner</h1>
+    </header>
+    <div class="press-start-2p-regular date" id="currentDate">날짜 로딩 중...</div>
+    <div class="buttons">
+        <button onclick="addTask('공부', document.getElementById('studyDetail').value)">공부 +</button>
+        <input type="text" id="studyDetail" placeholder="어떤 공부를 할 지 입력해주세요.">
+        <br><br>
+        <button onclick="addTask('운동', document.getElementById('exerciseDetail').value)">운동 +</button>
+        <input type="text" id="exerciseDetail" placeholder="하려는 운동을 입력해주세요.">
+        <br><br>
+        <button onclick="addTask('휴식', document.getElementById('restDetail').value)">휴식 +</button>
+        <input type="text" id="restDetail" placeholder="약속, 낮잠 등 쉬고 싶을 때 입력해주세요.">
+        <br><br>
+        <button onclick="clearAllTasks()">플래너 초기화</button>
+    </div>
+    <ul id="taskList"></ul>
+    <br><br>
+    <div class="progress-percentage" id="progressPercentage">0%</div>
+</div>
+</body>
+</html>
+
+<!-- https://fonts.google.com/noto/specimen/Noto+Serif+KR?subset=korean&noto.script=Kore -->
